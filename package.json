@@ -1,0 +1,50 @@
+{
+  "name": "nsgm-shop-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nsgm dev",
+    "build": "nsgm build",
+    "start": "nsgm start",
+    "export": "nsgm export",
+    "init": "nsgm init",
+    "upgrade": "nsgm upgrade",
+    "create": "nsgm create",
+    "delete": "nsgm delete",
+    "deletedb": "nsgm deletedb",
+    "create-config": "nsgm create-config config/modules.json",
+    "delete-config": "nsgm delete-config config/modules.json",
+    "generate-password": "node scripts/generate-password-hash.js",
+    "postversion": "git push && git push --tags",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nsgm-cli": "^2"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/lodash": "^4",
+    "typescript": "^5",
+    "jest": "^30",
+    "jest-environment-jsdom": "^30",
+    "@testing-library/jest-dom": "^6",
+    "@testing-library/react": "^14",
+    "@testing-library/user-event": "^14",
+    "@typescript-eslint/eslint-plugin": "^8",
+    "@typescript-eslint/parser": "^8",
+    "@types/jest": "^30",
+    "eslint": "^9",
+    "eslint-config-prettier": "^10",
+    "eslint-plugin-prettier": "^5",
+    "prettier": "^3",
+    "next-i18next": "^15",
+    "react-i18next": "^15",
+    "i18next": "^24"
+  }
+}
