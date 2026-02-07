@@ -1,0 +1,59 @@
+{
+  "cart": {
+    "title": "Cart管理",
+    "fields": {
+      "actions": "操作",
+      "user_id": "User Id",
+      "product_id": "Product Id",
+      "product_name": "Product Name",
+      "product_image": "Product Image",
+      "price": "Price",
+      "quantity": "数量",
+      "selected": "Selected"
+    },
+    "buttons": {
+      "add": "追加",
+      "edit": "編集",
+      "delete": "削除",
+      "search": "検索",
+      "export": "エクスポート",
+      "import": "インポート",
+      "batchDelete": "一括削除",
+      "confirm": "確認",
+      "cancel": "キャンセル"
+    },
+    "placeholders": {
+      "enterUser_id": "User Idを入力して検索",
+      "inputUser_id": "User Idを入力",
+      "enterProduct_id": "Product Idを入力して検索",
+      "inputProduct_id": "Product Idを入力",
+      "enterProduct_name": "Product Nameを入力して検索",
+      "inputProduct_name": "Product Nameを入力",
+      "enterProduct_image": "Product Imageを入力して検索",
+      "inputProduct_image": "Product Imageを入力",
+      "enterPrice": "Priceを入力して検索",
+      "inputPrice": "Priceを入力",
+      "enterQuantity": "数量を入力して検索",
+      "inputQuantity": "数量を入力",
+      "enterSelected": "Selectedを入力して検索",
+      "inputSelected": "Selectedを入力"
+    },
+    "messages": {
+      "confirmDelete": "削除してもよろしいですか？",
+      "confirmBatchDelete": "一括削除してもよろしいですか？",
+      "uploadSuccess": "ファイルのアップロードが成功しました",
+      "uploadFailed": "ファイルのアップロードが失敗しました",
+      "onlyExcel": "Excelファイルのみアップロード可能です！",
+      "fileSizeLimit": "ファイルサイズは2MBを超えることはできません！",
+      "noData": "エクスポートするデータがありません",
+      "noDataBatchDelete": "一括削除するデータがありません"
+    },
+    "modal": {
+      "addTitle": "Cartを追加",
+      "editTitle": "Cartを編集"
+    },
+    "pagination": {
+      "total": "合計 {{total}} 件"
+    }
+  }
+}

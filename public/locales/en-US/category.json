@@ -1,0 +1,53 @@
+{
+  "category": {
+    "title": "Category Management",
+    "fields": {
+      "actions": "Actions",
+      "name": "Name",
+      "icon": "Icon",
+      "parent_id": "Parent Id",
+      "sort_order": "Sort Order",
+      "status": "Status"
+    },
+    "buttons": {
+      "add": "Add",
+      "edit": "Edit",
+      "delete": "Delete",
+      "search": "Search",
+      "export": "Export",
+      "import": "Import",
+      "batchDelete": "Batch Delete",
+      "confirm": "Confirm",
+      "cancel": "Cancel"
+    },
+    "placeholders": {
+      "enterName": "Enter name to search",
+      "inputName": "Enter name",
+      "enterIcon": "Enter icon to search",
+      "inputIcon": "Enter icon",
+      "enterParent_id": "Enter parent id to search",
+      "inputParent_id": "Enter parent id",
+      "enterSort_order": "Enter sort order to search",
+      "inputSort_order": "Enter sort order",
+      "enterStatus": "Enter status to search",
+      "inputStatus": "Enter status"
+    },
+    "messages": {
+      "confirmDelete": "Are you sure to delete?",
+      "confirmBatchDelete": "Are you sure to batch delete?",
+      "uploadSuccess": "File uploaded successfully",
+      "uploadFailed": "File upload failed",
+      "onlyExcel": "Only Excel files are allowed!",
+      "fileSizeLimit": "File size cannot exceed 2MB!",
+      "noData": "No data to export",
+      "noDataBatchDelete": "No data to batch delete"
+    },
+    "modal": {
+      "addTitle": "Add Category",
+      "editTitle": "Edit Category"
+    },
+    "pagination": {
+      "total": "Total {{total}} records"
+    }
+  }
+}

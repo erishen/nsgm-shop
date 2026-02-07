@@ -23,11 +23,12 @@
         "searchable": true
       },
       {
-        "name": "description",
-        "type": "text",
+        "name": "icon",
+        "type": "varchar",
+        "length": 255,
         "required": false,
-        "comment": "分类描述",
-        "showInList": false,
+        "comment": "分类图标",
+        "showInList": true,
         "showInForm": true
       },
       {
@@ -106,14 +107,22 @@
         "name": "price",
         "type": "decimal",
         "required": true,
-        "comment": "商品价格",
+        "comment": "售价",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "original_price",
+        "type": "decimal",
+        "required": false,
+        "comment": "原价",
         "showInList": true,
         "showInForm": true
       },
       {
         "name": "category_id",
         "type": "integer",
-        "required": false,
+        "required": true,
         "comment": "分类ID",
         "showInList": true,
         "showInForm": true
@@ -122,7 +131,7 @@
         "name": "stock",
         "type": "integer",
         "required": true,
-        "comment": "库存数量",
+        "comment": "库存",
         "showInList": true,
         "showInForm": true
       },
@@ -131,7 +140,23 @@
         "type": "varchar",
         "length": 500,
         "required": false,
-        "comment": "商品图片URL",
+        "comment": "主图",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "images",
+        "type": "text",
+        "required": false,
+        "comment": "商品图集(JSON数组)",
+        "showInList": false,
+        "showInForm": true
+      },
+      {
+        "name": "sales",
+        "type": "integer",
+        "required": false,
+        "comment": "销量",
         "showInList": true,
         "showInForm": true
       },
@@ -142,6 +167,718 @@
         "required": true,
         "comment": "状态",
         "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "create_date",
+        "type": "timestamp",
+        "required": true,
+        "comment": "创建时间",
+        "isSystemField": true
+      },
+      {
+        "name": "update_date",
+        "type": "timestamp",
+        "required": true,
+        "comment": "更新时间",
+        "isSystemField": true
+      }
+    ]
+  },
+  {
+    "controller": "user",
+    "action": "manage",
+    "dictionary": ".",
+    "fields": [
+      {
+        "name": "id",
+        "type": "integer",
+        "required": true,
+        "comment": "主键",
+        "isPrimaryKey": true,
+        "isAutoIncrement": true
+      },
+      {
+        "name": "username",
+        "type": "varchar",
+        "length": 50,
+        "required": true,
+        "comment": "用户名",
+        "showInList": true,
+        "showInForm": true,
+        "searchable": true
+      },
+      {
+        "name": "password",
+        "type": "varchar",
+        "length": 255,
+        "required": true,
+        "comment": "密码",
+        "showInList": false,
+        "showInForm": true
+      },
+      {
+        "name": "nickname",
+        "type": "varchar",
+        "length": 100,
+        "required": true,
+        "comment": "昵称",
+        "showInList": true,
+        "showInForm": true,
+        "searchable": true
+      },
+      {
+        "name": "real_name",
+        "type": "varchar",
+        "length": 50,
+        "required": false,
+        "comment": "真实姓名",
+        "showInList": false,
+        "showInForm": true
+      },
+      {
+        "name": "avatar",
+        "type": "varchar",
+        "length": 500,
+        "required": false,
+        "comment": "头像",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "phone",
+        "type": "varchar",
+        "length": 20,
+        "required": false,
+        "comment": "手机号",
+        "showInList": true,
+        "showInForm": true,
+        "searchable": true
+      },
+      {
+        "name": "email",
+        "type": "varchar",
+        "length": 100,
+        "required": false,
+        "comment": "邮箱",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "status",
+        "type": "varchar",
+        "length": 20,
+        "required": true,
+        "comment": "状态",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "create_date",
+        "type": "timestamp",
+        "required": true,
+        "comment": "创建时间",
+        "isSystemField": true
+      },
+      {
+        "name": "update_date",
+        "type": "timestamp",
+        "required": true,
+        "comment": "更新时间",
+        "isSystemField": true
+      }
+    ]
+  },
+  {
+    "controller": "address",
+    "action": "manage",
+    "dictionary": ".",
+    "fields": [
+      {
+        "name": "id",
+        "type": "integer",
+        "required": true,
+        "comment": "主键",
+        "isPrimaryKey": true,
+        "isAutoIncrement": true
+      },
+      {
+        "name": "user_id",
+        "type": "integer",
+        "required": true,
+        "comment": "用户ID",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "receiver_name",
+        "type": "varchar",
+        "length": 100,
+        "required": true,
+        "comment": "收货人",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "receiver_phone",
+        "type": "varchar",
+        "length": 20,
+        "required": true,
+        "comment": "收货电话",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "province",
+        "type": "varchar",
+        "length": 50,
+        "required": true,
+        "comment": "省份",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "city",
+        "type": "varchar",
+        "length": 50,
+        "required": true,
+        "comment": "城市",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "district",
+        "type": "varchar",
+        "length": 50,
+        "required": true,
+        "comment": "区县",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "detail_address",
+        "type": "varchar",
+        "length": 500,
+        "required": true,
+        "comment": "详细地址",
+        "showInList": false,
+        "showInForm": true
+      },
+      {
+        "name": "is_default",
+        "type": "integer",
+        "required": true,
+        "comment": "是否默认",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "create_date",
+        "type": "timestamp",
+        "required": true,
+        "comment": "创建时间",
+        "isSystemField": true
+      },
+      {
+        "name": "update_date",
+        "type": "timestamp",
+        "required": true,
+        "comment": "更新时间",
+        "isSystemField": true
+      }
+    ]
+  },
+  {
+    "controller": "order",
+    "action": "manage",
+    "dictionary": ".",
+    "fields": [
+      {
+        "name": "id",
+        "type": "integer",
+        "required": true,
+        "comment": "主键",
+        "isPrimaryKey": true,
+        "isAutoIncrement": true
+      },
+      {
+        "name": "order_no",
+        "type": "varchar",
+        "length": 50,
+        "required": true,
+        "comment": "订单编号",
+        "showInList": true,
+        "showInForm": true,
+        "searchable": true
+      },
+      {
+        "name": "user_id",
+        "type": "integer",
+        "required": true,
+        "comment": "用户ID",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "total_amount",
+        "type": "decimal",
+        "required": true,
+        "comment": "订单总额",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "pay_amount",
+        "type": "decimal",
+        "required": true,
+        "comment": "实付金额",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "status",
+        "type": "varchar",
+        "length": 20,
+        "required": true,
+        "comment": "订单状态",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "pay_status",
+        "type": "varchar",
+        "length": 20,
+        "required": true,
+        "comment": "支付状态",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "pay_type",
+        "type": "varchar",
+        "length": 20,
+        "required": false,
+        "comment": "支付方式",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "pay_time",
+        "type": "timestamp",
+        "required": false,
+        "comment": "支付时间",
+        "showInList": true,
+        "showInForm": false
+      },
+      {
+        "name": "ship_time",
+        "type": "timestamp",
+        "required": false,
+        "comment": "发货时间",
+        "showInList": true,
+        "showInForm": false
+      },
+      {
+        "name": "express_company",
+        "type": "varchar",
+        "length": 50,
+        "required": false,
+        "comment": "快递公司",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "express_no",
+        "type": "varchar",
+        "length": 50,
+        "required": false,
+        "comment": "快递单号",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "receiver_name",
+        "type": "varchar",
+        "length": 100,
+        "required": true,
+        "comment": "收货人",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "receiver_phone",
+        "type": "varchar",
+        "length": 20,
+        "required": true,
+        "comment": "收货电话",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "receiver_address",
+        "type": "varchar",
+        "length": 500,
+        "required": true,
+        "comment": "收货地址",
+        "showInList": false,
+        "showInForm": true
+      },
+      {
+        "name": "remark",
+        "type": "varchar",
+        "length": 500,
+        "required": false,
+        "comment": "备注",
+        "showInList": false,
+        "showInForm": true
+      },
+      {
+        "name": "create_date",
+        "type": "timestamp",
+        "required": true,
+        "comment": "创建时间",
+        "isSystemField": true
+      },
+      {
+        "name": "update_date",
+        "type": "timestamp",
+        "required": true,
+        "comment": "更新时间",
+        "isSystemField": true
+      }
+    ]
+  },
+  {
+    "controller": "order_item",
+    "action": "manage",
+    "dictionary": ".",
+    "fields": [
+      {
+        "name": "id",
+        "type": "integer",
+        "required": true,
+        "comment": "主键",
+        "isPrimaryKey": true,
+        "isAutoIncrement": true
+      },
+      {
+        "name": "order_id",
+        "type": "integer",
+        "required": true,
+        "comment": "订单ID",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "product_id",
+        "type": "integer",
+        "required": true,
+        "comment": "商品ID",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "product_name",
+        "type": "varchar",
+        "length": 255,
+        "required": true,
+        "comment": "商品名称",
+        "showInList": true,
+        "showInForm": true,
+        "searchable": true
+      },
+      {
+        "name": "product_image",
+        "type": "varchar",
+        "length": 500,
+        "required": false,
+        "comment": "商品图片",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "price",
+        "type": "decimal",
+        "required": true,
+        "comment": "单价",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "quantity",
+        "type": "integer",
+        "required": true,
+        "comment": "数量",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "subtotal",
+        "type": "decimal",
+        "required": true,
+        "comment": "小计",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "create_date",
+        "type": "timestamp",
+        "required": true,
+        "comment": "创建时间",
+        "isSystemField": true
+      }
+    ]
+  },
+  {
+    "controller": "banner",
+    "action": "manage",
+    "dictionary": ".",
+    "fields": [
+      {
+        "name": "id",
+        "type": "integer",
+        "required": true,
+        "comment": "主键",
+        "isPrimaryKey": true,
+        "isAutoIncrement": true
+      },
+      {
+        "name": "title",
+        "type": "varchar",
+        "length": 200,
+        "required": true,
+        "comment": "标题",
+        "showInList": true,
+        "showInForm": true,
+        "searchable": true
+      },
+      {
+        "name": "image_url",
+        "type": "varchar",
+        "length": 500,
+        "required": true,
+        "comment": "图片",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "link_url",
+        "type": "varchar",
+        "length": 500,
+        "required": false,
+        "comment": "链接",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "sort_order",
+        "type": "integer",
+        "required": true,
+        "comment": "排序",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "status",
+        "type": "varchar",
+        "length": 20,
+        "required": true,
+        "comment": "状态",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "create_date",
+        "type": "timestamp",
+        "required": true,
+        "comment": "创建时间",
+        "isSystemField": true
+      },
+      {
+        "name": "update_date",
+        "type": "timestamp",
+        "required": true,
+        "comment": "更新时间",
+        "isSystemField": true
+      }
+    ]
+  },
+  {
+    "controller": "cart",
+    "action": "manage",
+    "dictionary": ".",
+    "fields": [
+      {
+        "name": "id",
+        "type": "integer",
+        "required": true,
+        "comment": "主键",
+        "isPrimaryKey": true,
+        "isAutoIncrement": true
+      },
+      {
+        "name": "user_id",
+        "type": "integer",
+        "required": true,
+        "comment": "用户ID",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "product_id",
+        "type": "integer",
+        "required": true,
+        "comment": "商品ID",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "product_name",
+        "type": "varchar",
+        "length": 255,
+        "required": true,
+        "comment": "商品名称",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "product_image",
+        "type": "varchar",
+        "length": 500,
+        "required": false,
+        "comment": "商品图片",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "price",
+        "type": "decimal",
+        "required": true,
+        "comment": "单价",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "quantity",
+        "type": "integer",
+        "required": true,
+        "comment": "数量",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "selected",
+        "type": "integer",
+        "required": true,
+        "comment": "是否选中",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "create_date",
+        "type": "timestamp",
+        "required": true,
+        "comment": "创建时间",
+        "isSystemField": true
+      },
+      {
+        "name": "update_date",
+        "type": "timestamp",
+        "required": true,
+        "comment": "更新时间",
+        "isSystemField": true
+      }
+    ]
+  },
+  {
+    "controller": "payment",
+    "action": "manage",
+    "dictionary": ".",
+    "fields": [
+      {
+        "name": "id",
+        "type": "integer",
+        "required": true,
+        "comment": "主键",
+        "isPrimaryKey": true,
+        "isAutoIncrement": true
+      },
+      {
+        "name": "order_id",
+        "type": "integer",
+        "required": true,
+        "comment": "订单ID",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "order_no",
+        "type": "varchar",
+        "length": 50,
+        "required": true,
+        "comment": "订单编号",
+        "showInList": true,
+        "showInForm": true,
+        "searchable": true
+      },
+      {
+        "name": "transaction_id",
+        "type": "varchar",
+        "length": 100,
+        "required": true,
+        "comment": "第三方交易号",
+        "showInList": true,
+        "showInForm": true,
+        "searchable": true
+      },
+      {
+        "name": "pay_type",
+        "type": "varchar",
+        "length": 20,
+        "required": true,
+        "comment": "支付方式",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "amount",
+        "type": "decimal",
+        "required": true,
+        "comment": "支付金额",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "status",
+        "type": "varchar",
+        "length": 20,
+        "required": true,
+        "comment": "支付状态",
+        "showInList": true,
+        "showInForm": true
+      },
+      {
+        "name": "pay_time",
+        "type": "timestamp",
+        "required": false,
+        "comment": "支付时间",
+        "showInList": true,
+        "showInForm": false
+      },
+      {
+        "name": "callback_time",
+        "type": "timestamp",
+        "required": false,
+        "comment": "回调时间",
+        "showInList": true,
+        "showInForm": false
+      },
+      {
+        "name": "remark",
+        "type": "text",
+        "required": false,
+        "comment": "备注",
+        "showInList": false,
         "showInForm": true
       },
       {

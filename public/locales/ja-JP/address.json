@@ -1,0 +1,62 @@
+{
+  "address": {
+    "title": "Address管理",
+    "fields": {
+      "actions": "操作",
+      "user_id": "User Id",
+      "receiver_name": "Receiver Name",
+      "receiver_phone": "Receiver Phone",
+      "province": "Province",
+      "city": "City",
+      "district": "District",
+      "is_default": "Is Default",
+      "detail_address": "Detail Address"
+    },
+    "buttons": {
+      "add": "追加",
+      "edit": "編集",
+      "delete": "削除",
+      "search": "検索",
+      "export": "エクスポート",
+      "import": "インポート",
+      "batchDelete": "一括削除",
+      "confirm": "確認",
+      "cancel": "キャンセル"
+    },
+    "placeholders": {
+      "enterUser_id": "User Idを入力して検索",
+      "inputUser_id": "User Idを入力",
+      "enterReceiver_name": "Receiver Nameを入力して検索",
+      "inputReceiver_name": "Receiver Nameを入力",
+      "enterReceiver_phone": "Receiver Phoneを入力して検索",
+      "inputReceiver_phone": "Receiver Phoneを入力",
+      "enterProvince": "Provinceを入力して検索",
+      "inputProvince": "Provinceを入力",
+      "enterCity": "Cityを入力して検索",
+      "inputCity": "Cityを入力",
+      "enterDistrict": "Districtを入力して検索",
+      "inputDistrict": "Districtを入力",
+      "enterDetail_address": "Detail Addressを入力して検索",
+      "inputDetail_address": "Detail Addressを入力",
+      "enterIs_default": "Is Defaultを入力して検索",
+      "inputIs_default": "Is Defaultを入力"
+    },
+    "messages": {
+      "confirmDelete": "削除してもよろしいですか？",
+      "confirmBatchDelete": "一括削除してもよろしいですか？",
+      "uploadSuccess": "ファイルのアップロードが成功しました",
+      "uploadFailed": "ファイルのアップロードが失敗しました",
+      "onlyExcel": "Excelファイルのみアップロード可能です！",
+      "fileSizeLimit": "ファイルサイズは2MBを超えることはできません！",
+      "noData": "エクスポートするデータがありません",
+      "noDataBatchDelete": "一括削除するデータがありません"
+    },
+    "modal": {
+      "addTitle": "Addressを追加",
+      "editTitle": "Addressを編集"
+    },
+    "pagination": {
+      "total": "合計 {{total}} 件"
+    }
+  }
+}

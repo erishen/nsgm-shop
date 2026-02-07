@@ -1,0 +1,61 @@
+{
+  "payment": {
+    "title": "Payment 管理",
+    "fields": {
+      "actions": "操作",
+      "order_id": "订单ID",
+      "order_no": "订单编号",
+      "transaction_id": "第三方交易号",
+      "pay_type": "支付方式",
+      "amount": "支付金额",
+      "status": "支付状态",
+      "pay_time": "支付时间",
+      "callback_time": "回调时间",
+      "remark": "备注"
+    },
+    "buttons": {
+      "add": "新增",
+      "edit": "修改",
+      "delete": "删除",
+      "search": "搜索",
+      "export": "导出",
+      "import": "导入",
+      "batchDelete": "批量删除",
+      "confirm": "确认",
+      "cancel": "取消"
+    },
+    "placeholders": {
+      "enterOrder_id": "请输入订单ID搜索",
+      "inputOrder_id": "请输入订单ID",
+      "enterOrder_no": "请输入订单编号搜索",
+      "inputOrder_no": "请输入订单编号",
+      "enterTransaction_id": "请输入第三方交易号搜索",
+      "inputTransaction_id": "请输入第三方交易号",
+      "enterPay_type": "请输入支付方式搜索",
+      "inputPay_type": "请输入支付方式",
+      "enterAmount": "请输入支付金额搜索",
+      "inputAmount": "请输入支付金额",
+      "enterStatus": "请输入支付状态搜索",
+      "inputStatus": "请输入支付状态",
+      "enterRemark": "请输入备注搜索",
+      "inputRemark": "请输入备注"
+    },
+    "messages": {
+      "confirmDelete": "确认删除吗",
+      "confirmBatchDelete": "确认批量删除吗",
+      "uploadSuccess": "文件上传成功",
+      "uploadFailed": "文件上传失败",
+      "onlyExcel": "只能上传 Excel 文件!",
+      "fileSizeLimit": "文件大小不能超过 2MB!",
+      "noData": "没有数据无需导出",
+      "noDataBatchDelete": "没有数据不能批量删除"
+    },
+    "modal": {
+      "addTitle": "新增 Payment",
+      "editTitle": "修改 Payment"
+    },
+    "pagination": {
+      "total": "共 {{total}} 条记录"
+    }
+  }
+}

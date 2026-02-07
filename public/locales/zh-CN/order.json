@@ -1,0 +1,79 @@
+{
+  "order": {
+    "title": "Order 管理",
+    "fields": {
+      "actions": "操作",
+      "order_no": "订单编号",
+      "user_id": "用户ID",
+      "total_amount": "订单总额",
+      "pay_amount": "实付金额",
+      "status": "订单状态",
+      "pay_status": "支付状态",
+      "pay_type": "支付方式",
+      "pay_time": "支付时间",
+      "ship_time": "发货时间",
+      "express_company": "快递公司",
+      "express_no": "快递单号",
+      "receiver_name": "收货人",
+      "receiver_phone": "收货电话",
+      "receiver_address": "收货地址",
+      "remark": "备注"
+    },
+    "buttons": {
+      "add": "新增",
+      "edit": "修改",
+      "delete": "删除",
+      "search": "搜索",
+      "export": "导出",
+      "import": "导入",
+      "batchDelete": "批量删除",
+      "confirm": "确认",
+      "cancel": "取消"
+    },
+    "placeholders": {
+      "enterOrder_no": "请输入订单编号搜索",
+      "inputOrder_no": "请输入订单编号",
+      "enterUser_id": "请输入用户ID搜索",
+      "inputUser_id": "请输入用户ID",
+      "enterTotal_amount": "请输入订单总额搜索",
+      "inputTotal_amount": "请输入订单总额",
+      "enterPay_amount": "请输入实付金额搜索",
+      "inputPay_amount": "请输入实付金额",
+      "enterStatus": "请输入订单状态搜索",
+      "inputStatus": "请输入订单状态",
+      "enterPay_status": "请输入支付状态搜索",
+      "inputPay_status": "请输入支付状态",
+      "enterPay_type": "请输入支付方式搜索",
+      "inputPay_type": "请输入支付方式",
+      "enterExpress_company": "请输入快递公司搜索",
+      "inputExpress_company": "请输入快递公司",
+      "enterExpress_no": "请输入快递单号搜索",
+      "inputExpress_no": "请输入快递单号",
+      "enterReceiver_name": "请输入收货人搜索",
+      "inputReceiver_name": "请输入收货人",
+      "enterReceiver_phone": "请输入收货电话搜索",
+      "inputReceiver_phone": "请输入收货电话",
+      "enterReceiver_address": "请输入收货地址搜索",
+      "inputReceiver_address": "请输入收货地址",
+      "enterRemark": "请输入备注搜索",
+      "inputRemark": "请输入备注"
+    },
+    "messages": {
+      "confirmDelete": "确认删除吗",
+      "confirmBatchDelete": "确认批量删除吗",
+      "uploadSuccess": "文件上传成功",
+      "uploadFailed": "文件上传失败",
+      "onlyExcel": "只能上传 Excel 文件!",
+      "fileSizeLimit": "文件大小不能超过 2MB!",
+      "noData": "没有数据无需导出",
+      "noDataBatchDelete": "没有数据不能批量删除"
+    },
+    "modal": {
+      "addTitle": "新增 Order",
+      "editTitle": "修改 Order"
+    },
+    "pagination": {
+      "total": "共 {{total}} 条记录"
+    }
+  }
+}

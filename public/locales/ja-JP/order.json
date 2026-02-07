@@ -1,0 +1,79 @@
+{
+  "order": {
+    "title": "Order管理",
+    "fields": {
+      "actions": "操作",
+      "order_no": "Order No",
+      "user_id": "User Id",
+      "total_amount": "Total Amount",
+      "pay_amount": "Pay Amount",
+      "status": "ステータス",
+      "pay_status": "Pay Status",
+      "pay_type": "Pay Type",
+      "pay_time": "Pay Time",
+      "ship_time": "Ship Time",
+      "express_company": "Express Company",
+      "express_no": "Express No",
+      "receiver_name": "Receiver Name",
+      "receiver_phone": "Receiver Phone",
+      "receiver_address": "Receiver Address",
+      "remark": "Remark"
+    },
+    "buttons": {
+      "add": "追加",
+      "edit": "編集",
+      "delete": "削除",
+      "search": "検索",
+      "export": "エクスポート",
+      "import": "インポート",
+      "batchDelete": "一括削除",
+      "confirm": "確認",
+      "cancel": "キャンセル"
+    },
+    "placeholders": {
+      "enterOrder_no": "Order Noを入力して検索",
+      "inputOrder_no": "Order Noを入力",
+      "enterUser_id": "User Idを入力して検索",
+      "inputUser_id": "User Idを入力",
+      "enterTotal_amount": "Total Amountを入力して検索",
+      "inputTotal_amount": "Total Amountを入力",
+      "enterPay_amount": "Pay Amountを入力して検索",
+      "inputPay_amount": "Pay Amountを入力",
+      "enterStatus": "ステータスを入力して検索",
+      "inputStatus": "ステータスを入力",
+      "enterPay_status": "Pay Statusを入力して検索",
+      "inputPay_status": "Pay Statusを入力",
+      "enterPay_type": "Pay Typeを入力して検索",
+      "inputPay_type": "Pay Typeを入力",
+      "enterExpress_company": "Express Companyを入力して検索",
+      "inputExpress_company": "Express Companyを入力",
+      "enterExpress_no": "Express Noを入力して検索",
+      "inputExpress_no": "Express Noを入力",
+      "enterReceiver_name": "Receiver Nameを入力して検索",
+      "inputReceiver_name": "Receiver Nameを入力",
+      "enterReceiver_phone": "Receiver Phoneを入力して検索",
+      "inputReceiver_phone": "Receiver Phoneを入力",
+      "enterReceiver_address": "Receiver Addressを入力して検索",
+      "inputReceiver_address": "Receiver Addressを入力",
+      "enterRemark": "Remarkを入力して検索",
+      "inputRemark": "Remarkを入力"
+    },
+    "messages": {
+      "confirmDelete": "削除してもよろしいですか？",
+      "confirmBatchDelete": "一括削除してもよろしいですか？",
+      "uploadSuccess": "ファイルのアップロードが成功しました",
+      "uploadFailed": "ファイルのアップロードが失敗しました",
+      "onlyExcel": "Excelファイルのみアップロード可能です！",
+      "fileSizeLimit": "ファイルサイズは2MBを超えることはできません！",
+      "noData": "エクスポートするデータがありません",
+      "noDataBatchDelete": "一括削除するデータがありません"
+    },
+    "modal": {
+      "addTitle": "Orderを追加",
+      "editTitle": "Orderを編集"
+    },
+    "pagination": {
+      "total": "合計 {{total}} 件"
+    }
+  }
+}

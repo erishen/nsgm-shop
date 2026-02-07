@@ -1,0 +1,53 @@
+{
+  "category": {
+    "title": "Category 管理",
+    "fields": {
+      "actions": "操作",
+      "name": "分类名称",
+      "icon": "分类图标",
+      "parent_id": "父分类ID",
+      "sort_order": "排序",
+      "status": "状态"
+    },
+    "buttons": {
+      "add": "新增",
+      "edit": "修改",
+      "delete": "删除",
+      "search": "搜索",
+      "export": "导出",
+      "import": "导入",
+      "batchDelete": "批量删除",
+      "confirm": "确认",
+      "cancel": "取消"
+    },
+    "placeholders": {
+      "enterName": "请输入分类名称搜索",
+      "inputName": "请输入分类名称",
+      "enterIcon": "请输入分类图标搜索",
+      "inputIcon": "请输入分类图标",
+      "enterParent_id": "请输入父分类ID搜索",
+      "inputParent_id": "请输入父分类ID",
+      "enterSort_order": "请输入排序搜索",
+      "inputSort_order": "请输入排序",
+      "enterStatus": "请输入状态搜索",
+      "inputStatus": "请输入状态"
+    },
+    "messages": {
+      "confirmDelete": "确认删除吗",
+      "confirmBatchDelete": "确认批量删除吗",
+      "uploadSuccess": "文件上传成功",
+      "uploadFailed": "文件上传失败",
+      "onlyExcel": "只能上传 Excel 文件!",
+      "fileSizeLimit": "文件大小不能超过 2MB!",
+      "noData": "没有数据无需导出",
+      "noDataBatchDelete": "没有数据不能批量删除"
+    },
+    "modal": {
+      "addTitle": "新增 Category",
+      "editTitle": "修改 Category"
+    },
+    "pagination": {
+      "total": "共 {{total}} 条记录"
+    }
+  }
+}

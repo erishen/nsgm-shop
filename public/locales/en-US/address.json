@@ -1,0 +1,62 @@
+{
+  "address": {
+    "title": "Address Management",
+    "fields": {
+      "actions": "Actions",
+      "user_id": "User Id",
+      "receiver_name": "Receiver Name",
+      "receiver_phone": "Receiver Phone",
+      "province": "Province",
+      "city": "City",
+      "district": "District",
+      "is_default": "Is Default",
+      "detail_address": "Detail Address"
+    },
+    "buttons": {
+      "add": "Add",
+      "edit": "Edit",
+      "delete": "Delete",
+      "search": "Search",
+      "export": "Export",
+      "import": "Import",
+      "batchDelete": "Batch Delete",
+      "confirm": "Confirm",
+      "cancel": "Cancel"
+    },
+    "placeholders": {
+      "enterUser_id": "Enter user id to search",
+      "inputUser_id": "Enter user id",
+      "enterReceiver_name": "Enter receiver name to search",
+      "inputReceiver_name": "Enter receiver name",
+      "enterReceiver_phone": "Enter receiver phone to search",
+      "inputReceiver_phone": "Enter receiver phone",
+      "enterProvince": "Enter province to search",
+      "inputProvince": "Enter province",
+      "enterCity": "Enter city to search",
+      "inputCity": "Enter city",
+      "enterDistrict": "Enter district to search",
+      "inputDistrict": "Enter district",
+      "enterDetail_address": "Enter detail address to search",
+      "inputDetail_address": "Enter detail address",
+      "enterIs_default": "Enter is default to search",
+      "inputIs_default": "Enter is default"
+    },
+    "messages": {
+      "confirmDelete": "Are you sure to delete?",
+      "confirmBatchDelete": "Are you sure to batch delete?",
+      "uploadSuccess": "File uploaded successfully",
+      "uploadFailed": "File upload failed",
+      "onlyExcel": "Only Excel files are allowed!",
+      "fileSizeLimit": "File size cannot exceed 2MB!",
+      "noData": "No data to export",
+      "noDataBatchDelete": "No data to batch delete"
+    },
+    "modal": {
+      "addTitle": "Add Address",
+      "editTitle": "Edit Address"
+    },
+    "pagination": {
+      "total": "Total {{total}} records"
+    }
+  }
+}

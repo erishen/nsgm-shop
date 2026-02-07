@@ -1,0 +1,59 @@
+{
+  "order_item": {
+    "title": "Order_item 管理",
+    "fields": {
+      "actions": "操作",
+      "order_id": "订单ID",
+      "product_id": "商品ID",
+      "product_name": "商品名称",
+      "product_image": "商品图片",
+      "price": "单价",
+      "quantity": "数量",
+      "subtotal": "小计"
+    },
+    "buttons": {
+      "add": "新增",
+      "edit": "修改",
+      "delete": "删除",
+      "search": "搜索",
+      "export": "导出",
+      "import": "导入",
+      "batchDelete": "批量删除",
+      "confirm": "确认",
+      "cancel": "取消"
+    },
+    "placeholders": {
+      "enterOrder_id": "请输入订单ID搜索",
+      "inputOrder_id": "请输入订单ID",
+      "enterProduct_id": "请输入商品ID搜索",
+      "inputProduct_id": "请输入商品ID",
+      "enterProduct_name": "请输入商品名称搜索",
+      "inputProduct_name": "请输入商品名称",
+      "enterProduct_image": "请输入商品图片搜索",
+      "inputProduct_image": "请输入商品图片",
+      "enterPrice": "请输入单价搜索",
+      "inputPrice": "请输入单价",
+      "enterQuantity": "请输入数量搜索",
+      "inputQuantity": "请输入数量",
+      "enterSubtotal": "请输入小计搜索",
+      "inputSubtotal": "请输入小计"
+    },
+    "messages": {
+      "confirmDelete": "确认删除吗",
+      "confirmBatchDelete": "确认批量删除吗",
+      "uploadSuccess": "文件上传成功",
+      "uploadFailed": "文件上传失败",
+      "onlyExcel": "只能上传 Excel 文件!",
+      "fileSizeLimit": "文件大小不能超过 2MB!",
+      "noData": "没有数据无需导出",
+      "noDataBatchDelete": "没有数据不能批量删除"
+    },
+    "modal": {
+      "addTitle": "新增 Order_item",
+      "editTitle": "修改 Order_item"
+    },
+    "pagination": {
+      "total": "共 {{total}} 条记录"
+    }
+  }
+}

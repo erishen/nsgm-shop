@@ -1,0 +1,59 @@
+{
+  "order_item": {
+    "title": "Order_item Management",
+    "fields": {
+      "actions": "Actions",
+      "order_id": "Order Id",
+      "product_id": "Product Id",
+      "product_name": "Product Name",
+      "product_image": "Product Image",
+      "price": "Price",
+      "quantity": "Quantity",
+      "subtotal": "Subtotal"
+    },
+    "buttons": {
+      "add": "Add",
+      "edit": "Edit",
+      "delete": "Delete",
+      "search": "Search",
+      "export": "Export",
+      "import": "Import",
+      "batchDelete": "Batch Delete",
+      "confirm": "Confirm",
+      "cancel": "Cancel"
+    },
+    "placeholders": {
+      "enterOrder_id": "Enter order id to search",
+      "inputOrder_id": "Enter order id",
+      "enterProduct_id": "Enter product id to search",
+      "inputProduct_id": "Enter product id",
+      "enterProduct_name": "Enter product name to search",
+      "inputProduct_name": "Enter product name",
+      "enterProduct_image": "Enter product image to search",
+      "inputProduct_image": "Enter product image",
+      "enterPrice": "Enter price to search",
+      "inputPrice": "Enter price",
+      "enterQuantity": "Enter quantity to search",
+      "inputQuantity": "Enter quantity",
+      "enterSubtotal": "Enter subtotal to search",
+      "inputSubtotal": "Enter subtotal"
+    },
+    "messages": {
+      "confirmDelete": "Are you sure to delete?",
+      "confirmBatchDelete": "Are you sure to batch delete?",
+      "uploadSuccess": "File uploaded successfully",
+      "uploadFailed": "File upload failed",
+      "onlyExcel": "Only Excel files are allowed!",
+      "fileSizeLimit": "File size cannot exceed 2MB!",
+      "noData": "No data to export",
+      "noDataBatchDelete": "No data to batch delete"
+    },
+    "modal": {
+      "addTitle": "Add Order_item",
+      "editTitle": "Edit Order_item"
+    },
+    "pagination": {
+      "total": "Total {{total}} records"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "product": {
+    "title": "Product Management",
+    "fields": {
+      "actions": "Actions",
+      "name": "Name",
+      "price": "Price",
+      "original_price": "Original Price",
+      "category_id": "Category Id",
+      "stock": "Stock",
+      "image_url": "Image Url",
+      "sales": "Sales",
+      "status": "Status",
+      "description": "Description",
+      "images": "Images"
+    },
+    "buttons": {
+      "add": "Add",
+      "edit": "Edit",
+      "delete": "Delete",
+      "search": "Search",
+      "export": "Export",
+      "import": "Import",
+      "batchDelete": "Batch Delete",
+      "confirm": "Confirm",
+      "cancel": "Cancel"
+    },
+    "placeholders": {
+      "enterName": "Enter name to search",
+      "inputName": "Enter name",
+      "enterDescription": "Enter description to search",
+      "inputDescription": "Enter description",
+      "enterPrice": "Enter price to search",
+      "inputPrice": "Enter price",
+      "enterOriginal_price": "Enter original price to search",
+      "inputOriginal_price": "Enter original price",
+      "enterCategory_id": "Enter category id to search",
+      "inputCategory_id": "Enter category id",
+      "enterStock": "Enter stock to search",
+      "inputStock": "Enter stock",
+      "enterImage_url": "Enter image url to search",
+      "inputImage_url": "Enter image url",
+      "enterImages": "Enter images to search",
+      "inputImages": "Enter images",
+      "enterSales": "Enter sales to search",
+      "inputSales": "Enter sales",
+      "enterStatus": "Enter status to search",
+      "inputStatus": "Enter status"
+    },
+    "messages": {
+      "confirmDelete": "Are you sure to delete?",
+      "confirmBatchDelete": "Are you sure to batch delete?",
+      "uploadSuccess": "File uploaded successfully",
+      "uploadFailed": "File upload failed",
+      "onlyExcel": "Only Excel files are allowed!",
+      "fileSizeLimit": "File size cannot exceed 2MB!",
+      "noData": "No data to export",
+      "noDataBatchDelete": "No data to batch delete"
+    },
+    "modal": {
+      "addTitle": "Add Product",
+      "editTitle": "Edit Product"
+    },
+    "pagination": {
+      "total": "Total {{total}} records"
+    }
+  }
+}

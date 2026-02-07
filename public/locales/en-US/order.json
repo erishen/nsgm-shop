@@ -1,0 +1,79 @@
+{
+  "order": {
+    "title": "Order Management",
+    "fields": {
+      "actions": "Actions",
+      "order_no": "Order No",
+      "user_id": "User Id",
+      "total_amount": "Total Amount",
+      "pay_amount": "Pay Amount",
+      "status": "Status",
+      "pay_status": "Pay Status",
+      "pay_type": "Pay Type",
+      "pay_time": "Pay Time",
+      "ship_time": "Ship Time",
+      "express_company": "Express Company",
+      "express_no": "Express No",
+      "receiver_name": "Receiver Name",
+      "receiver_phone": "Receiver Phone",
+      "receiver_address": "Receiver Address",
+      "remark": "Remark"
+    },
+    "buttons": {
+      "add": "Add",
+      "edit": "Edit",
+      "delete": "Delete",
+      "search": "Search",
+      "export": "Export",
+      "import": "Import",
+      "batchDelete": "Batch Delete",
+      "confirm": "Confirm",
+      "cancel": "Cancel"
+    },
+    "placeholders": {
+      "enterOrder_no": "Enter order no to search",
+      "inputOrder_no": "Enter order no",
+      "enterUser_id": "Enter user id to search",
+      "inputUser_id": "Enter user id",
+      "enterTotal_amount": "Enter total amount to search",
+      "inputTotal_amount": "Enter total amount",
+      "enterPay_amount": "Enter pay amount to search",
+      "inputPay_amount": "Enter pay amount",
+      "enterStatus": "Enter status to search",
+      "inputStatus": "Enter status",
+      "enterPay_status": "Enter pay status to search",
+      "inputPay_status": "Enter pay status",
+      "enterPay_type": "Enter pay type to search",
+      "inputPay_type": "Enter pay type",
+      "enterExpress_company": "Enter express company to search",
+      "inputExpress_company": "Enter express company",
+      "enterExpress_no": "Enter express no to search",
+      "inputExpress_no": "Enter express no",
+      "enterReceiver_name": "Enter receiver name to search",
+      "inputReceiver_name": "Enter receiver name",
+      "enterReceiver_phone": "Enter receiver phone to search",
+      "inputReceiver_phone": "Enter receiver phone",
+      "enterReceiver_address": "Enter receiver address to search",
+      "inputReceiver_address": "Enter receiver address",
+      "enterRemark": "Enter remark to search",
+      "inputRemark": "Enter remark"
+    },
+    "messages": {
+      "confirmDelete": "Are you sure to delete?",
+      "confirmBatchDelete": "Are you sure to batch delete?",
+      "uploadSuccess": "File uploaded successfully",
+      "uploadFailed": "File upload failed",
+      "onlyExcel": "Only Excel files are allowed!",
+      "fileSizeLimit": "File size cannot exceed 2MB!",
+      "noData": "No data to export",
+      "noDataBatchDelete": "No data to batch delete"
+    },
+    "modal": {
+      "addTitle": "Add Order",
+      "editTitle": "Edit Order"
+    },
+    "pagination": {
+      "total": "Total {{total}} records"
+    }
+  }
+}

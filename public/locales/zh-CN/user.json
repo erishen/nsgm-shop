@@ -1,0 +1,62 @@
+{
+  "user": {
+    "title": "User 管理",
+    "fields": {
+      "actions": "操作",
+      "username": "用户名",
+      "nickname": "昵称",
+      "avatar": "头像",
+      "phone": "手机号",
+      "email": "邮箱",
+      "status": "状态",
+      "password": "密码",
+      "real_name": "真实姓名"
+    },
+    "buttons": {
+      "add": "新增",
+      "edit": "修改",
+      "delete": "删除",
+      "search": "搜索",
+      "export": "导出",
+      "import": "导入",
+      "batchDelete": "批量删除",
+      "confirm": "确认",
+      "cancel": "取消"
+    },
+    "placeholders": {
+      "enterUsername": "请输入用户名搜索",
+      "inputUsername": "请输入用户名",
+      "enterPassword": "请输入密码搜索",
+      "inputPassword": "请输入密码",
+      "enterNickname": "请输入昵称搜索",
+      "inputNickname": "请输入昵称",
+      "enterReal_name": "请输入真实姓名搜索",
+      "inputReal_name": "请输入真实姓名",
+      "enterAvatar": "请输入头像搜索",
+      "inputAvatar": "请输入头像",
+      "enterPhone": "请输入手机号搜索",
+      "inputPhone": "请输入手机号",
+      "enterEmail": "请输入邮箱搜索",
+      "inputEmail": "请输入邮箱",
+      "enterStatus": "请输入状态搜索",
+      "inputStatus": "请输入状态"
+    },
+    "messages": {
+      "confirmDelete": "确认删除吗",
+      "confirmBatchDelete": "确认批量删除吗",
+      "uploadSuccess": "文件上传成功",
+      "uploadFailed": "文件上传失败",
+      "onlyExcel": "只能上传 Excel 文件!",
+      "fileSizeLimit": "文件大小不能超过 2MB!",
+      "noData": "没有数据无需导出",
+      "noDataBatchDelete": "没有数据不能批量删除"
+    },
+    "modal": {
+      "addTitle": "新增 User",
+      "editTitle": "修改 User"
+    },
+    "pagination": {
+      "total": "共 {{total}} 条记录"
+    }
+  }
+}

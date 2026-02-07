@@ -1,0 +1,62 @@
+{
+  "user": {
+    "title": "User管理",
+    "fields": {
+      "actions": "操作",
+      "username": "ユーザー名",
+      "nickname": "Nickname",
+      "avatar": "Avatar",
+      "phone": "電話",
+      "email": "メール",
+      "status": "ステータス",
+      "password": "Password",
+      "real_name": "Real Name"
+    },
+    "buttons": {
+      "add": "追加",
+      "edit": "編集",
+      "delete": "削除",
+      "search": "検索",
+      "export": "エクスポート",
+      "import": "インポート",
+      "batchDelete": "一括削除",
+      "confirm": "確認",
+      "cancel": "キャンセル"
+    },
+    "placeholders": {
+      "enterUsername": "ユーザー名を入力して検索",
+      "inputUsername": "ユーザー名を入力",
+      "enterPassword": "Passwordを入力して検索",
+      "inputPassword": "Passwordを入力",
+      "enterNickname": "Nicknameを入力して検索",
+      "inputNickname": "Nicknameを入力",
+      "enterReal_name": "Real Nameを入力して検索",
+      "inputReal_name": "Real Nameを入力",
+      "enterAvatar": "Avatarを入力して検索",
+      "inputAvatar": "Avatarを入力",
+      "enterPhone": "電話を入力して検索",
+      "inputPhone": "電話を入力",
+      "enterEmail": "メールを入力して検索",
+      "inputEmail": "メールを入力",
+      "enterStatus": "ステータスを入力して検索",
+      "inputStatus": "ステータスを入力"
+    },
+    "messages": {
+      "confirmDelete": "削除してもよろしいですか？",
+      "confirmBatchDelete": "一括削除してもよろしいですか？",
+      "uploadSuccess": "ファイルのアップロードが成功しました",
+      "uploadFailed": "ファイルのアップロードが失敗しました",
+      "onlyExcel": "Excelファイルのみアップロード可能です！",
+      "fileSizeLimit": "ファイルサイズは2MBを超えることはできません！",
+      "noData": "エクスポートするデータがありません",
+      "noDataBatchDelete": "一括削除するデータがありません"
+    },
+    "modal": {
+      "addTitle": "Userを追加",
+      "editTitle": "Userを編集"
+    },
+    "pagination": {
+      "total": "合計 {{total}} 件"
+    }
+  }
+}

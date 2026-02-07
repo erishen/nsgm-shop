@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "target": "ES2022",
     "module": "esnext",
     "declaration": true,
     "strict": true,
-    "lib": ["dom", "ES2022"],
+    "lib": [
+      "dom",
+      "ES2022"
+    ],
     "esModuleInterop": true,
     "allowJs": true,
     "skipLibCheck": true,
@@ -17,7 +20,9 @@
     "noImplicitAny": false,
     "incremental": true,
     "paths": {
-      "@/*": ["./client/*"]
+      "@/*": [
+        "./client/*"
+      ]
     },
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -25,6 +30,14 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["client/**/*", "pages/**/*"],
-  "exclude": ["node_modules", "**/__tests__/*", ".next", "lib"]
+  "include": [
+    "client/**/*",
+    "pages/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/__tests__/*",
+    ".next",
+    "lib"
+  ]
 }

@@ -1,0 +1,62 @@
+{
+  "address": {
+    "title": "Address 管理",
+    "fields": {
+      "actions": "操作",
+      "user_id": "用户ID",
+      "receiver_name": "收货人",
+      "receiver_phone": "收货电话",
+      "province": "省份",
+      "city": "城市",
+      "district": "区县",
+      "is_default": "是否默认",
+      "detail_address": "详细地址"
+    },
+    "buttons": {
+      "add": "新增",
+      "edit": "修改",
+      "delete": "删除",
+      "search": "搜索",
+      "export": "导出",
+      "import": "导入",
+      "batchDelete": "批量删除",
+      "confirm": "确认",
+      "cancel": "取消"
+    },
+    "placeholders": {
+      "enterUser_id": "请输入用户ID搜索",
+      "inputUser_id": "请输入用户ID",
+      "enterReceiver_name": "请输入收货人搜索",
+      "inputReceiver_name": "请输入收货人",
+      "enterReceiver_phone": "请输入收货电话搜索",
+      "inputReceiver_phone": "请输入收货电话",
+      "enterProvince": "请输入省份搜索",
+      "inputProvince": "请输入省份",
+      "enterCity": "请输入城市搜索",
+      "inputCity": "请输入城市",
+      "enterDistrict": "请输入区县搜索",
+      "inputDistrict": "请输入区县",
+      "enterDetail_address": "请输入详细地址搜索",
+      "inputDetail_address": "请输入详细地址",
+      "enterIs_default": "请输入是否默认搜索",
+      "inputIs_default": "请输入是否默认"
+    },
+    "messages": {
+      "confirmDelete": "确认删除吗",
+      "confirmBatchDelete": "确认批量删除吗",
+      "uploadSuccess": "文件上传成功",
+      "uploadFailed": "文件上传失败",
+      "onlyExcel": "只能上传 Excel 文件!",
+      "fileSizeLimit": "文件大小不能超过 2MB!",
+      "noData": "没有数据无需导出",
+      "noDataBatchDelete": "没有数据不能批量删除"
+    },
+    "modal": {
+      "addTitle": "新增 Address",
+      "editTitle": "修改 Address"
+    },
+    "pagination": {
+      "total": "共 {{total}} 条记录"
+    }
+  }
+}

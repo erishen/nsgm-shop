@@ -1,0 +1,68 @@
+{
+  "product": {
+    "title": "Product 管理",
+    "fields": {
+      "actions": "操作",
+      "name": "商品名称",
+      "price": "售价",
+      "original_price": "原价",
+      "category_id": "分类ID",
+      "stock": "库存",
+      "image_url": "主图",
+      "sales": "销量",
+      "status": "状态",
+      "description": "商品描述",
+      "images": "商品图集(JSON数组)"
+    },
+    "buttons": {
+      "add": "新增",
+      "edit": "修改",
+      "delete": "删除",
+      "search": "搜索",
+      "export": "导出",
+      "import": "导入",
+      "batchDelete": "批量删除",
+      "confirm": "确认",
+      "cancel": "取消"
+    },
+    "placeholders": {
+      "enterName": "请输入商品名称搜索",
+      "inputName": "请输入商品名称",
+      "enterDescription": "请输入商品描述搜索",
+      "inputDescription": "请输入商品描述",
+      "enterPrice": "请输入售价搜索",
+      "inputPrice": "请输入售价",
+      "enterOriginal_price": "请输入原价搜索",
+      "inputOriginal_price": "请输入原价",
+      "enterCategory_id": "请输入分类ID搜索",
+      "inputCategory_id": "请输入分类ID",
+      "enterStock": "请输入库存搜索",
+      "inputStock": "请输入库存",
+      "enterImage_url": "请输入主图搜索",
+      "inputImage_url": "请输入主图",
+      "enterImages": "请输入商品图集(JSON数组)搜索",
+      "inputImages": "请输入商品图集(JSON数组)",
+      "enterSales": "请输入销量搜索",
+      "inputSales": "请输入销量",
+      "enterStatus": "请输入状态搜索",
+      "inputStatus": "请输入状态"
+    },
+    "messages": {
+      "confirmDelete": "确认删除吗",
+      "confirmBatchDelete": "确认批量删除吗",
+      "uploadSuccess": "文件上传成功",
+      "uploadFailed": "文件上传失败",
+      "onlyExcel": "只能上传 Excel 文件!",
+      "fileSizeLimit": "文件大小不能超过 2MB!",
+      "noData": "没有数据无需导出",
+      "noDataBatchDelete": "没有数据不能批量删除"
+    },
+    "modal": {
+      "addTitle": "新增 Product",
+      "editTitle": "修改 Product"
+    },
+    "pagination": {
+      "total": "共 {{total}} 条记录"
+    }
+  }
+}

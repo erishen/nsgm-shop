@@ -1,0 +1,53 @@
+{
+  "banner": {
+    "title": "Banner Management",
+    "fields": {
+      "actions": "Actions",
+      "title": "Title",
+      "image_url": "Image Url",
+      "link_url": "Link Url",
+      "sort_order": "Sort Order",
+      "status": "Status"
+    },
+    "buttons": {
+      "add": "Add",
+      "edit": "Edit",
+      "delete": "Delete",
+      "search": "Search",
+      "export": "Export",
+      "import": "Import",
+      "batchDelete": "Batch Delete",
+      "confirm": "Confirm",
+      "cancel": "Cancel"
+    },
+    "placeholders": {
+      "enterTitle": "Enter title to search",
+      "inputTitle": "Enter title",
+      "enterImage_url": "Enter image url to search",
+      "inputImage_url": "Enter image url",
+      "enterLink_url": "Enter link url to search",
+      "inputLink_url": "Enter link url",
+      "enterSort_order": "Enter sort order to search",
+      "inputSort_order": "Enter sort order",
+      "enterStatus": "Enter status to search",
+      "inputStatus": "Enter status"
+    },
+    "messages": {
+      "confirmDelete": "Are you sure to delete?",
+      "confirmBatchDelete": "Are you sure to batch delete?",
+      "uploadSuccess": "File uploaded successfully",
+      "uploadFailed": "File upload failed",
+      "onlyExcel": "Only Excel files are allowed!",
+      "fileSizeLimit": "File size cannot exceed 2MB!",
+      "noData": "No data to export",
+      "noDataBatchDelete": "No data to batch delete"
+    },
+    "modal": {
+      "addTitle": "Add Banner",
+      "editTitle": "Edit Banner"
+    },
+    "pagination": {
+      "total": "Total {{total}} records"
+    }
+  }
+}
