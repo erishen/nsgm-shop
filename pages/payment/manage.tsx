@@ -26,7 +26,7 @@ import { getPaymentService } from '@/service/payment/manage'
 import { RootState, AppDispatch } from '@/redux/store'
 import _ from 'lodash'
 import { useTranslation } from 'next-i18next'
-import { getAntdLocale } from '@/utils/i18n'
+import { getAntdLocale, formatDateTime } from '@/utils/i18n'
 import { useRouter } from 'next/router'
 import { handleXSS, checkModalObj } from '@/utils/common'
 import { UploadOutlined } from '@ant-design/icons'
@@ -161,13 +161,13 @@ const Page = ({ payment }) => {
       title: t('payment:payment.fields.pay_time'),
       dataIndex: 'pay_time',
       key: 'pay_time',
-      render: (text: string) => text ? new Date(text).toLocaleString() : '-'
+      render: (text: string) => text ? formatDateTime(text) : '-'
     },
     {
       title: t('payment:payment.fields.callback_time'),
       dataIndex: 'callback_time',
       key: 'callback_time',
-      render: (text: string) => text ? new Date(text).toLocaleString() : '-'
+      render: (text: string) => text ? formatDateTime(text) : '-'
     },
     {
       title: t('payment:payment.fields.actions'),

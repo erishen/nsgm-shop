@@ -17,7 +17,7 @@ class DatabasePoolManager {
             // 测试连接池
             await serverDB.executeQuery('SELECT 1 as test')
             this.initialized = true
-            console.log('数据库连接池初始化成功')
+
 
             // 设置进程退出时的清理函数
             this.setupGracefulShutdown()

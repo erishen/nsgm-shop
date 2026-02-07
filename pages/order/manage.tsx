@@ -26,7 +26,7 @@ import { getOrderService } from '@/service/order/manage'
 import { RootState, AppDispatch } from '@/redux/store'
 import _ from 'lodash'
 import { useTranslation } from 'next-i18next'
-import { getAntdLocale } from '@/utils/i18n'
+import { getAntdLocale, formatDateTime } from '@/utils/i18n'
 import { useRouter } from 'next/router'
 import { handleXSS, checkModalObj } from '@/utils/common'
 import { UploadOutlined } from '@ant-design/icons'
@@ -181,13 +181,13 @@ const Page = ({ order }) => {
       title: t('order:order.fields.pay_time'),
       dataIndex: 'pay_time',
       key: 'pay_time',
-      render: (text: string) => text ? new Date(text).toLocaleString() : '-'
+      render: (text: string) => text ? formatDateTime(text) : '-'
     },
     {
       title: t('order:order.fields.ship_time'),
       dataIndex: 'ship_time',
       key: 'ship_time',
-      render: (text: string) => text ? new Date(text).toLocaleString() : '-'
+      render: (text: string) => text ? formatDateTime(text) : '-'
     },
     {
       title: t('order:order.fields.express_company'),

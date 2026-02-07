@@ -16,6 +16,7 @@
     "create-config": "nsgm create-config config/modules.json",
     "delete-config": "nsgm delete-config config/modules.json",
     "generate-password": "node scripts/generate-password-hash.js",
+    "seed": "node scripts/seed.js",
     "postversion": "git push && git push --tags",
     "test": "jest",
     "test:watch": "jest --watch",

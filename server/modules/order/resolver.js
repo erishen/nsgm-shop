@@ -1,5 +1,6 @@
 const { executeQuery, executePaginatedQuery } = require('../../utils/common')
 const { validateInteger, validatePagination, validateId } = require('../../utils/validation')
+const { formatResultDates } = require('../../utils/date-formatter')
 
 module.exports = {
     // 获取order列表（分页）
@@ -13,7 +14,11 @@ module.exports = {
 
             console.log('执行分页查询:', { sql, values, countSql });
 
-            return await executePaginatedQuery(sql, countSql, values);
+            const result = await executePaginatedQuery(sql, countSql, values);
+            if (result && result.items) {
+                result.items = formatResultDates(result.items);
+            }
+            return result;
         } catch (error) {
             console.error('获取order列表失败:', error.message);
             throw error;
@@ -34,7 +39,7 @@ module.exports = {
                 throw new Error(`ID为 ${validId} 的order不存在`);
             }
             
-            return result;
+            return formatResultDates(result);
         } catch (error) {
             console.error('获取order失败:', error.message);
             throw error;
@@ -57,7 +62,8 @@ module.exports = {
             const results = await context.dataloaders.order.byId.loadMany(validIds);
             
             // 过滤掉 null 结果（未找到的记录）
-            return results.filter(result => result !== null && !(result instanceof Error));
+            const filteredResults = results.filter(result => result !== null && !(result instanceof Error));
+            return formatResultDates(filteredResults);
         } catch (error) {
             console.error('批量获取order失败:', error.message);
             throw error;
@@ -90,7 +96,11 @@ module.exports = {
             
             console.log('搜索order（备用查询）:', { sql, values, countSql, countValues });
             
-            return await executePaginatedQuery(sql, countSql, values, countValues);
+            const result = await executePaginatedQuery(sql, countSql, values, countValues);
+            if (result && result.items) {
+                result.items = formatResultDates(result.items);
+            }
+            return result;
         } catch (error) {
             console.error('搜索order失败:', error.message);
             throw error;
