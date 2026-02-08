@@ -25,7 +25,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "nsgm-cli": "^2.1.41"
+    "nsgm-cli": "^2.1.47"
   },
   "devDependencies": {
     "@types/node": "^20",

@@ -195,11 +195,13 @@ export const StyledTable = styled(Table)`
   .ant-table-container {
     position: relative;
     border-radius: 12px 12px 0 0;
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
   }
 
   .ant-table-content {
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
   }
 
   .ant-table-thead > tr > th {
@@ -287,6 +289,11 @@ export const StyledTable = styled(Table)`
     z-index: 2;
     background: linear-gradient(135deg, #f0f5ff 0%, #e6f4ff 100%);
     box-shadow: -2px 0 8px rgba(0, 0, 0, 0.08);
+  }
+
+  /* 确保操作列在悬停时保持实色背景 */
+  .ant-table-tbody > tr:hover > .ant-table-cell-fix-right {
+    background: linear-gradient(135deg, #f0f5ff 0%, #e6f4ff 100%) !important;
   }
 
   .ant-table-pagination.ant-pagination {
@@ -401,6 +408,7 @@ export const StyledTable = styled(Table)`
   /* 横向滚动条样式 */
   .ant-table-body {
     overflow-x: auto !important;
+    overflow-y: hidden !important;
 
     &::-webkit-scrollbar {
       height: 8px;
