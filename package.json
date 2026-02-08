@@ -17,7 +17,6 @@
     "delete-config": "nsgm delete-config config/modules.json",
     "generate-password": "node scripts/generate-password-hash.js",
     "seed": "node scripts/seed.js",
-    "convert-dataloaders": "node scripts/convert-dataloaders.js",
     "postversion": "git push && git push --tags",
     "test": "jest",
     "test:watch": "jest --watch",
