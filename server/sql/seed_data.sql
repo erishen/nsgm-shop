@@ -53,10 +53,10 @@ INSERT INTO `product` (`id`, `name`, `description`, `price`, `original_price`, `
 (1, 'iPhone 15 Pro Max', '苹果最新旗舰手机，A17 Pro芯片，钛金属边框，4800万像素主摄', 9999.00, 10999.00, 6, 100, 'https://images.unsplash.com/photo-1696446701796-da61225697cc?w=500', '["https://images.unsplash.com/photo-1696446701796-da61225697cc?w=500","https://images.unsplash.com/photo-1696446702188-3e9f9f0f9b0f?w=500"]', 568, 'active', NOW(), NOW()),
 (2, 'Samsung Galaxy S24 Ultra', '三星旗舰，2亿像素，S Pen手写笔，AI功能强大', 9699.00, 10999.00, 6, 80, 'https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=500', '["https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=500"]', 342, 'active', NOW(), NOW()),
 (3, 'Xiaomi 14 Pro', '徕卡影像，骁龙8 Gen3，120W快充', 4999.00, 5499.00, 6, 200, 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500', '["https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500"]', 892, 'active', NOW(), NOW()),
-(4, '华为 Mate 60 Pro', '麒麟9000S芯片，卫星通话，鸿蒙系统', 6999.00, 7999.00, 6, 50, 'https://images.unsplash.com/photo-1598327775660-e6215e71b7b8?w=500', '["https://images.unsplash.com/photo-1598327775660-e6215e71b7b8?w=500"]', 1205, 'active', NOW(), NOW()),
+(4, '华为 Mate 60 Pro', '麒麟9000S芯片，卫星通话，鸿蒙系统', 6999.00, 7999.00, 6, 50, 'https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=500', '["https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=500"]', 1205, 'active', NOW(), NOW()),
 -- 电脑办公类
-(5, 'MacBook Pro 16寸 M3 Max', '苹果最强笔记本，M3 Max芯片，36GB内存', 24999.00, 26999.00, 7, 30, 'https://images.unsplash.com/photo-1517336714731-489689fd1ca4?w=500', '["https://images.unsplash.com/photo-1517336714731-489689fd1ca4?w=500"]', 156, 'active', NOW(), NOW()),
-(6, 'Dell XPS 15', '4K OLED屏，RTX 4070，创作利器', 14999.00, 16999.00, 7, 45, 'https://images.unsplash.com/photo-1593642632823-8f78536788c6?w=500', '["https://images.unsplash.com/photo-1593642632823-8f78536788c6?w=500"]', 234, 'active', NOW(), NOW()),
+(5, 'MacBook Pro 16寸 M3 Max', '苹果最强笔记本，M3 Max芯片，36GB内存', 24999.00, 26999.00, 7, 30, 'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=500', '["https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=500"]', 156, 'active', NOW(), NOW()),
+(6, 'Dell XPS 15', '4K OLED屏，RTX 4070，创作利器', 14999.00, 16999.00, 7, 45, 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=500', '["https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=500"]', 234, 'active', NOW(), NOW()),
 (7, 'iPad Pro 12.9寸 M2', '专业级平板，M2芯片，mini-LED屏幕', 8499.00, 9299.00, 7, 120, 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=500', '["https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=500"]', 445, 'active', NOW(), NOW()),
 -- 智能设备类
 (8, 'Apple Watch Ultra 2', '专业运动手表，钛金属表壳，100米防水', 6499.00, 6999.00, 9, 150, 'https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=500', '["https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=500"]', 678, 'active', NOW(), NOW()),
@@ -113,7 +113,7 @@ INSERT INTO `cart` (`id`, `user_id`, `product_id`, `product_name`, `product_imag
 (3, 2, 11, '纯棉休闲T恤', 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500', 99.00, 3, 0, NOW(), NOW()),
 (4, 3, 3, 'Xiaomi 14 Pro', 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500', 4999.00, 1, 1, NOW(), NOW()),
 (5, 3, 16, '智利车厘子 JJ级 2kg', 'https://images.unsplash.com/photo-1528825871115-3581a5387919?w=500', 299.00, 2, 1, NOW(), NOW()),
-(6, 4, 5, 'MacBook Pro 16寸 M3 Max', 'https://images.unsplash.com/photo-1517336714731-489689fd1ca4?w=500', 24999.00, 1, 1, NOW(), NOW()),
+(6, 4, 5, 'MacBook Pro 16寸 M3 Max', 'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=500', 24999.00, 1, 1, NOW(), NOW()),
 (7, 5, 24, 'Nike Air Force 1', 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500', 749.00, 2, 1, NOW(), NOW()),
 (8, 5, 25, 'Adidas Ultraboost 22', 'https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?w=500', 1099.00, 1, 1, NOW(), NOW());
 
@@ -145,7 +145,7 @@ INSERT INTO `order_item` (`id`, `order_id`, `product_id`, `product_name`, `produ
 -- 订单2: 小米手机
 (3, 2, 3, 'Xiaomi 14 Pro', 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500', 4999.00, 1, 4999.00, '2024-02-02 08:00:00'),
 -- 订单3: MacBook Pro
-(4, 3, 5, 'MacBook Pro 16寸 M3 Max', 'https://images.unsplash.com/photo-1517336714731-489689fd1ca4?w=500', 24999.00, 1, 24999.00, '2024-02-06 15:00:00'),
+(4, 3, 5, 'MacBook Pro 16寸 M3 Max', 'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=500', 24999.00, 1, 24999.00, '2024-02-06 15:00:00'),
 -- 订单4: 运动鞋两双
 (5, 4, 24, 'Nike Air Force 1', 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500', 749.00, 2, 1498.00, '2024-02-07 10:00:00'),
 (6, 4, 18, '有机燕麦片 1kg', 'https://images.unsplash.com/photo-1517093725432-a9ac7b9c3be8?w=500', 39.90, 2, 79.80, '2024-02-07 10:00:00'),
@@ -156,7 +156,7 @@ INSERT INTO `order_item` (`id`, `order_id`, `product_id`, `product_name`, `produ
 -- 订单7: 已完成-耳机
 (9, 7, 9, 'AirPods Pro 2', 'https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=500', 1899.00, 1, 1899.00, '2024-01-29 09:00:00'),
 -- 订单8: 已取消
-(10, 8, 4, '华为 Mate 60 Pro', 'https://images.unsplash.com/photo-1598327775660-e6215e71b7b8?w=500', 6999.00, 1, 6999.00, '2024-02-05 11:00:00');
+(10, 8, 4, '华为 Mate 60 Pro', 'https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=500', 6999.00, 1, 6999.00, '2024-02-05 11:00:00');
 
 -- ============================================
 -- 9. 支付记录数据

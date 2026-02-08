@@ -1,24 +1,42 @@
-import DataLoader from 'dataloader';
-import { executeQuery } from '../utils/common';
+const DataLoader = require('dataloader');
+const { executeQuery } = require('../utils/common');
+
+/**
+ * 处理 product 行数据，将 JSON 字符串解析为对象
+ */
+function processProductRow(row) {
+  if (!row) return row;
+  
+  // 处理 images 字段（JSON 字符串转数组）
+  if (row.images && typeof row.images === 'string') {
+    try {
+      row.images = JSON.parse(row.images);
+    } catch (e) {
+      row.images = [];
+    }
+  }
+  
+  return row;
+}
 
 /**
  * Product DataLoader
  * 针对 product 表的批量数据加载器，解决 N+1 查询问题
  */
-export class ProductDataLoader {
+class ProductDataLoader {
   // 按 ID 批量加载 product
-  public readonly byId: DataLoader<number, any>;
+  byId;
   
   // 按名称批量加载 product  
-  public readonly byName: DataLoader<string, any>;
+  byName;
   
   // 按名称模糊搜索 product
-  public readonly searchByName: DataLoader<string, any[]>;
+  searchByName;
 
   constructor() {
     // 按 ID 批量加载
     this.byId = new DataLoader(
-      async (ids: readonly number[]) => {
+      async (ids) => {
         try {
           console.log(`🔍 DataLoader: 批量加载 ${ids.length} 个 product by ID`);
           
@@ -28,9 +46,7 @@ export class ProductDataLoader {
           const results = await executeQuery(sql, [...ids]);
           
           // 确保返回顺序与输入 keys 一致，未找到的返回 null
-          return ids.map(id => 
-            results.find((row: any) => row.id === id) || null
-          );
+          return ids.map(id => processProductRow(results.find((row) => row.id === id) || null));
         } catch (error) {
           console.error('DataLoader byId 批量加载失败:', error);
           throw error;
@@ -45,7 +61,7 @@ export class ProductDataLoader {
 
     // 按名称批量加载
     this.byName = new DataLoader(
-      async (names: readonly string[]) => {
+      async (names) => {
         try {
           console.log(`🔍 DataLoader: 批量加载 ${names.length} 个 product by name`);
           
@@ -55,9 +71,7 @@ export class ProductDataLoader {
           const results = await executeQuery(sql, [...names]);
           
           // 确保返回顺序与输入 keys 一致
-          return names.map(name => 
-            results.find((row: any) => row.name === name) || null
-          );
+          return names.map(name => processProductRow(results.find((row) => row.name === name) || null));
         } catch (error) {
           console.error('DataLoader byName 批量加载失败:', error);
           throw error;
@@ -72,7 +86,7 @@ export class ProductDataLoader {
 
     // 按名称模糊搜索（返回数组）
     this.searchByName = new DataLoader(
-      async (searchTerms: readonly string[]) => {
+      async (searchTerms) => {
         try {
           console.log(`🔍 DataLoader: 批量搜索 ${searchTerms.length} 个关键词`);
           
@@ -80,7 +94,8 @@ export class ProductDataLoader {
           const results = await Promise.all(
             searchTerms.map(async (term) => {
               const sql = 'SELECT id, name, description, price, original_price, category_id, stock, image_url, images, sales, status, create_date, update_date FROM product WHERE name LIKE ?';
-              return executeQuery(sql, [`%${term}%`]);
+              const rows = await executeQuery(sql, [`%${term}%`]);
+              return rows.map(processProductRow);
             })
           );
           
@@ -100,7 +115,7 @@ export class ProductDataLoader {
     
     // 按 category_id 批量加载相关的 product
     this.byCategoryId = new DataLoader(
-      async (category_ids: readonly number[]) => {
+      async (category_ids) => {
         try {
           console.log(`🔍 DataLoader: 批量加载 ${category_ids.length} 个 product by category_id`);
           
@@ -111,7 +126,9 @@ export class ProductDataLoader {
           
           // 按外键分组
           return category_ids.map(category_id => 
-            results.filter((row: any) => row.category_id === category_id)
+            results
+              .filter((row) => row.category_id === category_id)
+              .map(processProductRow)
           );
         } catch (error) {
           console.error('DataLoader byCategoryId 批量加载失败:', error);
@@ -129,7 +146,7 @@ export class ProductDataLoader {
   /**
    * 清除所有缓存
    */
-  clearAll(): void {
+  clearAll() {
     this.byId.clearAll();
     this.byName.clearAll();
     this.searchByName.clearAll();
@@ -139,21 +156,21 @@ export class ProductDataLoader {
   /**
    * 清除特定 ID 的缓存
    */
-  clearById(id: number): void {
+  clearById(id) {
     this.byId.clear(id);
   }
 
   /**
    * 清除特定名称的缓存
    */
-  clearByName(name: string): void {
+  clearByName(name) {
     this.byName.clear(name);
   }
 
   /**
    * 预加载数据到缓存
    */
-  prime(id: number, data: any): void {
+  prime(id, data) {
     this.byId.prime(id, data);
     if (data && data.name) {
       this.byName.prime(data.name, data);
@@ -184,6 +201,8 @@ export class ProductDataLoader {
 /**
  * 创建 Product DataLoader 实例
  */
-export function createProductDataLoader(): ProductDataLoader {
+function createProductDataLoader() {
   return new ProductDataLoader();
 }
+
+module.exports = { ProductDataLoader, createProductDataLoader };

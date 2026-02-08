@@ -38,7 +38,8 @@ const App = ({ Component, pageProps }) => {
     Component.displayName === "ErrorPage" ||
     Component.name === "ErrorPage" ||
     Component.displayName === "LoginPage" ||
-    Component.name === "LoginPage";
+    Component.name === "LoginPage" ||
+    router.pathname?.startsWith('/shop');
 
   // Get Antd locale based on current locale
   const antdLocale = getAntdLocale(currentLocale);
@@ -58,7 +59,7 @@ const App = ({ Component, pageProps }) => {
   useEffect(() => {
     if (!mounted) return;
 
-    // 对于特殊页面，跳过登录检查
+    // 对于特殊页面（包括 shop），直接设置加载完成，不需要等待
     if (isSpecialPage) {
       setLoginChecked(true);
       setPageLoad(true);
@@ -97,8 +98,11 @@ const App = ({ Component, pageProps }) => {
       setLoginChecked(true);
     });
 
+    // 只对非特殊页面延迟加载，特殊页面（shop 等）已经在上面设置为 true
     setTimeout(() => {
-      setPageLoad(true);
+      if (!isSpecialPage) {
+        setPageLoad(true);
+      }
     }, 100);
   }, [mounted, isSpecialPage]);
 

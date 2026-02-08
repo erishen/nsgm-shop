@@ -1,4 +1,3 @@
-import React from "react";
 import { ConfigProvider } from "antd";
 
 interface SSRSafeAntdProviderProps {

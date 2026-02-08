@@ -1,0 +1,153 @@
+{
+  "page": {
+    "title": "NSGM 在线商店",
+    "description": "发现优质商品，享受便捷购物体验"
+  },
+  "categories": {
+    "title": "商品分类",
+    "description": "浏览所有商品分类，快速找到您需要的商品",
+    "noCategories": "暂无分类",
+    "totalCategories": "总分类数",
+    "activeCategories": "可用分类",
+    "totalProducts": "总商品数"
+  },
+  "featuredProducts": {
+    "title": "热门商品"
+  },
+  "features": {
+    "hotDeals": {
+      "title": "热销商品",
+      "description": "限时特惠，不容错过"
+    },
+    "newArrivals": {
+      "title": "新品上市",
+      "description": "最新商品，抢先体验"
+    },
+    "freeShipping": {
+      "title": "免费配送",
+      "description": "订单满99元免运费"
+    }
+  },
+  "hotDeals": {
+    "title": "特惠商品",
+    "results": "个特惠商品",
+    "sortBy": {
+      "discountHighToLow": "折扣从高到低",
+      "discountLowToHigh": "折扣从低到高"
+    },
+    "info": "特惠商品说明",
+    "description": "这里展示了所有正在打折的商品，折扣力度大，数量有限，先到先得。",
+    "noDeals": "暂无特惠商品",
+    "noDealsDescription": "当前没有特惠商品，请稍后再来查看。"
+  },
+  "layout": {
+    "menu": {
+      "home": "首页",
+      "categories": "分类",
+      "products": "全部商品",
+      "deals": "特惠商品"
+    },
+    "searchPlaceholder": "搜索商品...",
+    "cart": "购物车",
+    "account": "我的账户",
+    "userMenu": {
+      "profile": "个人资料",
+      "orders": "我的订单",
+      "logout": "退出登录"
+    },
+    "footer": {
+      "description": "NSGM Shop 提供优质商品和卓越的购物体验。",
+      "quickLinks": "快速链接",
+      "about": "关于我们",
+      "contact": "联系我们",
+      "faq": "常见问题",
+      "contactInfo": "联系信息",
+      "allRightsReserved": "保留所有权利"
+    }
+  },
+  "product": {
+    "addToCart": "加入购物车",
+    "buyNow": "立即购买",
+    "description": "商品描述",
+    "specifications": "商品规格",
+    "reviews": "用户评价",
+    "relatedProducts": "相关商品",
+    "outOfStock": "缺货",
+    "inStock": "有货",
+    "quantity": "数量",
+    "sales": "已售"
+  },
+  "productList": {
+    "title": "全部商品",
+    "filter": "筛选",
+    "sort": "排序",
+    "sortBy": {
+      "default": "默认排序",
+      "priceLowToHigh": "价格从低到高",
+      "priceHighToLow": "价格从高到低",
+      "salesHighToLow": "销量从高到低",
+      "newest": "最新上架"
+    },
+    "category": "分类",
+    "priceRange": "价格区间",
+    "minPrice": "最低价",
+    "maxPrice": "最高价",
+    "apply": "应用",
+    "clear": "清除",
+    "results": "搜索结果",
+    "noProducts": "暂无商品",
+    "loading": "加载中..."
+  },
+  "productDetail": {
+    "backToList": "返回商品列表",
+    "share": "分享",
+    "sku": "商品编号",
+    "category": "所属分类",
+    "stock": "库存",
+    "addToCartSuccess": "已加入购物车",
+    "viewCart": "查看购物车",
+    "continueShopping": "继续购物",
+    "descriptionTitle": "商品详情",
+    "specificationsTitle": "规格参数",
+    "reviewsTitle": "用户评价",
+    "writeReview": "写评价",
+    "rating": "评分",
+    "relatedProductsTitle": "相关商品推荐"
+  },
+  "cart": {
+    "title": "购物车",
+    "empty": "购物车是空的",
+    "emptyDescription": "您的购物车中没有商品，快去选购吧！",
+    "continueShopping": "继续购物",
+    "backToShop": "返回商店",
+    "checkout": "去结算",
+    "subtotal": "小计",
+    "shipping": "运费",
+    "tax": "税费",
+    "total": "总计",
+    "discount": "折扣",
+    "remove": "移除",
+    "update": "更新",
+    "itemCount": "共 {{count}} 件商品",
+    "items": "件商品",
+    "orderSummary": "订单摘要",
+    "clearCart": "清空购物车"
+  },
+  "checkout": {
+    "title": "结算",
+    "shippingAddress": "收货地址",
+    "paymentMethod": "支付方式",
+    "orderSummary": "订单摘要",
+    "placeOrder": "提交订单",
+    "billingAddress": "账单地址",
+    "sameAsShipping": "同收货地址"
+  },
+  "order": {
+    "confirmation": "订单确认",
+    "thankYou": "感谢您的购买！",
+    "orderNumber": "订单号",
+    "estimatedDelivery": "预计送达",
+    "trackOrder": "跟踪订单",
+    "continueShopping": "继续购物"
+  }
+}

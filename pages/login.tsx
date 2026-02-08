@@ -38,8 +38,7 @@ const Page = ({ html }) => {
   useEffect(() => {
     setMounted(true);
     // 显示调试信息
-    const apiPrefix = getLocalApiPrefix();
-
+    void getLocalApiPrefix();
   }, []);
 
   const createMarkup = () => {

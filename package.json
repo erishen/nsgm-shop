@@ -17,6 +17,7 @@
     "delete-config": "nsgm delete-config config/modules.json",
     "generate-password": "node scripts/generate-password-hash.js",
     "seed": "node scripts/seed.js",
+    "convert-dataloaders": "node scripts/convert-dataloaders.js",
     "postversion": "git push && git push --tags",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -25,7 +26,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "nsgm-cli": "^2"
+    "nsgm-cli": "^2.1.41"
   },
   "devDependencies": {
     "@types/node": "^20",

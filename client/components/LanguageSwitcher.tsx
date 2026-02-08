@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState, CSSProperties } from "react";
 import { Select } from "antd";
 import { useRouter } from "next/router";
 import { GlobalOutlined } from "@ant-design/icons";
@@ -6,7 +6,7 @@ import { GlobalOutlined } from "@ant-design/icons";
 const { Option } = Select;
 
 interface LanguageSwitcherProps {
-  style?: React.CSSProperties;
+  style?: CSSProperties;
   size?: "small" | "middle" | "large";
 }
 

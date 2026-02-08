@@ -1,0 +1,153 @@
+{
+  "page": {
+    "title": "NSGM Online Store",
+    "description": "Discover quality products and enjoy convenient shopping experience"
+  },
+  "categories": {
+    "title": "Categories",
+    "description": "Browse all product categories to quickly find what you need",
+    "noCategories": "No categories available",
+    "totalCategories": "Total Categories",
+    "activeCategories": "Active Categories",
+    "totalProducts": "Total Products"
+  },
+  "featuredProducts": {
+    "title": "Featured Products"
+  },
+  "features": {
+    "hotDeals": {
+      "title": "Hot Deals",
+      "description": "Limited time offers, don't miss out"
+    },
+    "newArrivals": {
+      "title": "New Arrivals",
+      "description": "Latest products, be the first to experience"
+    },
+    "freeShipping": {
+      "title": "Free Shipping",
+      "description": "Free shipping on orders over ¥99"
+    }
+  },
+  "hotDeals": {
+    "title": "Hot Deals",
+    "results": "hot deals",
+    "sortBy": {
+      "discountHighToLow": "Discount High to Low",
+      "discountLowToHigh": "Discount Low to High"
+    },
+    "info": "Hot Deals Info",
+    "description": "Here are all discounted products with great offers, limited quantities, first come first served.",
+    "noDeals": "No hot deals available",
+    "noDealsDescription": "There are no hot deals at the moment, please check back later."
+  },
+  "layout": {
+    "menu": {
+      "home": "Home",
+      "categories": "Categories",
+      "products": "Products",
+      "deals": "Deals"
+    },
+    "searchPlaceholder": "Search products...",
+    "cart": "Cart",
+    "account": "Account",
+    "userMenu": {
+      "profile": "Profile",
+      "orders": "My Orders",
+      "logout": "Logout"
+    },
+    "footer": {
+      "description": "NSGM Shop offers quality products and excellent shopping experience.",
+      "quickLinks": "Quick Links",
+      "about": "About Us",
+      "contact": "Contact Us",
+      "faq": "FAQ",
+      "contactInfo": "Contact Information",
+      "allRightsReserved": "All rights reserved"
+    }
+  },
+  "product": {
+    "addToCart": "Add to Cart",
+    "buyNow": "Buy Now",
+    "description": "Description",
+    "specifications": "Specifications",
+    "reviews": "Reviews",
+    "relatedProducts": "Related Products",
+    "outOfStock": "Out of Stock",
+    "inStock": "In Stock",
+    "quantity": "Quantity",
+    "sales": "sold"
+  },
+  "productList": {
+    "title": "All Products",
+    "filter": "Filter",
+    "sort": "Sort",
+    "sortBy": {
+      "default": "Default",
+      "priceLowToHigh": "Price: Low to High",
+      "priceHighToLow": "Price: High to Low",
+      "salesHighToLow": "Sales: High to Low",
+      "newest": "Newest"
+    },
+    "category": "Category",
+    "priceRange": "Price Range",
+    "minPrice": "Min Price",
+    "maxPrice": "Max Price",
+    "apply": "Apply",
+    "clear": "Clear",
+    "results": "Results",
+    "noProducts": "No products found",
+    "loading": "Loading..."
+  },
+  "productDetail": {
+    "backToList": "Back to Products",
+    "share": "Share",
+    "sku": "SKU",
+    "category": "Category",
+    "stock": "Stock",
+    "addToCartSuccess": "Added to Cart",
+    "viewCart": "View Cart",
+    "continueShopping": "Continue Shopping",
+    "descriptionTitle": "Product Details",
+    "specificationsTitle": "Specifications",
+    "reviewsTitle": "Customer Reviews",
+    "writeReview": "Write a Review",
+    "rating": "Rating",
+    "relatedProductsTitle": "Related Products"
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty",
+    "emptyDescription": "Your shopping cart has no items, go shopping now!",
+    "continueShopping": "Continue Shopping",
+    "backToShop": "Back to Shop",
+    "checkout": "Checkout",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "tax": "Tax",
+    "total": "Total",
+    "discount": "Discount",
+    "remove": "Remove",
+    "update": "Update",
+    "itemCount": "{{count}} items in total",
+    "items": "items",
+    "orderSummary": "Order Summary",
+    "clearCart": "Clear Cart"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "shippingAddress": "Shipping Address",
+    "paymentMethod": "Payment Method",
+    "orderSummary": "Order Summary",
+    "placeOrder": "Place Order",
+    "billingAddress": "Billing Address",
+    "sameAsShipping": "Same as shipping address"
+  },
+  "order": {
+    "confirmation": "Order Confirmation",
+    "thankYou": "Thank you for your purchase!",
+    "orderNumber": "Order Number",
+    "estimatedDelivery": "Estimated Delivery",
+    "trackOrder": "Track Order",
+    "continueShopping": "Continue Shopping"
+  }
+}
