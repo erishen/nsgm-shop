@@ -3,6 +3,39 @@ const { validateInteger, validatePagination, validateId } = require('../../utils
 const { formatResultDates } = require('../../utils/date-formatter')
 
 module.exports = {
+    // 用户登录
+    login: async ({ username, password }) => {
+        try {
+            if (!username || !password) {
+                throw new Error('用户名和密码不能为空');
+            }
+
+            const sql = 'SELECT id, username, password, nickname, avatar, status FROM user WHERE username = ?';
+            const results = await executeQuery(sql, [username]);
+
+            if (!results || results.length === 0) {
+                throw new Error('用户名或密码错误');
+            }
+
+            const user = results[0];
+
+            if (user.status !== 'active') {
+                throw new Error('账号已被禁用');
+            }
+
+            // 简单验证密码（实际应该使用 bcrypt 等加密库）
+            if (user.password !== password) {
+                throw new Error('用户名或密码错误');
+            }
+
+            // 返回用户 ID 作为 token（简化版，实际应该使用 JWT）
+            return `user_${user.id}_${Date.now()}`;
+        } catch (error) {
+            console.error('登录失败:', error.message);
+            throw error;
+        }
+    },
+
     // 获取user列表（分页）
     user: async ({ page = 0, pageSize = 10 }) => {
         try {

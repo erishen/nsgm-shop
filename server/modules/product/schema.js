@@ -48,6 +48,7 @@ module.exports = {
 
         input ProductSearchInput {
             name: String
+            category_id: Int
         }
     `
 }

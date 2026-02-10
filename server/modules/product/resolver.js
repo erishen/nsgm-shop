@@ -110,6 +110,11 @@ module.exports = {
                 values.push(namePattern);
                 countValues.push(namePattern);
             }
+            if (data.category_id !== undefined) {
+                whereSql += ' AND category_id = ?';
+                values.push(data.category_id);
+                countValues.push(data.category_id);
+            }
 
             const sql = `SELECT id, name, description, price, original_price, category_id, stock, image_url, images, sales, status, create_date, update_date FROM product WHERE 1=1${whereSql} LIMIT ? OFFSET ?`;
             const countSql = `SELECT COUNT(*) as counts FROM product WHERE 1=1${whereSql}`;

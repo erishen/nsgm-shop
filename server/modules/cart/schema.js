@@ -32,11 +32,11 @@ module.exports = {
 
         input CartAddInput {
             user_id: Int
-            product_id: Int
+            product_id: Int!
             product_name: String
             product_image: String
             price: Float
-            quantity: Int
+            quantity: Int!
             selected: Int
         }
 

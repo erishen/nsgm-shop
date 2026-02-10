@@ -6,6 +6,7 @@ module.exports = {
         userSearch(page: Int, pageSize: Int, data: UserSearchInput): Users
     `,
     mutation: `
+        login(username: String, password: String): String
         userAdd(data: UserAddInput): Int
         userBatchAdd(datas: [UserAddInput]): Int
         userUpdate(id: Int, data: UserAddInput): Boolean

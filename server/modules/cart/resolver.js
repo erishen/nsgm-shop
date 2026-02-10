@@ -105,32 +105,46 @@ module.exports = {
     // 添加cart - 添加 DataLoader 缓存预加载
     cartAdd: async ({ data }, context) => {
         try {
-            const validUser_id = validateInteger(data.user_id, 'user_id', { required: true });
+            // 默认 user_id 为 1（当前登录用户）
+            const validUser_id = validateInteger(data.user_id || 1, 'user_id', { required: true });
             const validProduct_id = validateInteger(data.product_id, 'product_id', { required: true });
-            if (!data.product_name) {
-                throw new Error('商品名称是必填字段');
+            const validQuantity = validateInteger(data.quantity || 1, 'quantity', { required: true });
+            const validSelected = validateInteger(data.selected !== undefined ? data.selected : 1, 'selected', { required: true });
+
+            // 如果没有提供商品信息，则从数据库查询
+            let productName = data.product_name;
+            let productImage = data.product_image;
+            let productPrice = data.price;
+
+            if (!productName || !productPrice) {
+                const productSql = 'SELECT id, name, image_url, price FROM product WHERE id = ?';
+                const productResults = await executeQuery(productSql, [validProduct_id]);
+
+                if (!productResults || productResults.length === 0) {
+                    throw new Error(`商品ID ${validProduct_id} 不存在`);
+                }
+
+                const product = productResults[0];
+                productName = productName || product.name;
+                productImage = productImage || product.image_url;
+                productPrice = productPrice || product.price;
             }
-            if (!data.price) {
-                throw new Error('单价是必填字段');
-            }
-            const validQuantity = validateInteger(data.quantity, 'quantity', { required: true });
-            const validSelected = validateInteger(data.selected, 'selected', { required: true });
-            
+
             const sql = 'INSERT INTO cart (user_id, product_id, product_name, product_image, price, quantity, selected) VALUES (?, ?, ?, ?, ?, ?, ?)';
-            const values = [validUser_id, validProduct_id, data.product_name, data.product_image, data.price, validQuantity, validSelected];
-            
+            const values = [validUser_id, validProduct_id, productName, productImage, productPrice, validQuantity, validSelected];
+
             console.log('添加cart:', { sql, values });
-            
+
             const results = await executeQuery(sql, values);
             const insertId = results.insertId;
-            
+
             // 预加载新数据到 DataLoader 缓存
             if (insertId && context?.dataloaders?.cart) {
-                const newRecord = { id: insertId, user_id: validUser_id, product_id: validProduct_id, product_name: data.product_name, product_image: data.product_image, price: data.price, quantity: validQuantity, selected: validSelected };
+                const newRecord = { id: insertId, user_id: validUser_id, product_id: validProduct_id, product_name: productName, product_image: productImage, price: productPrice, quantity: validQuantity, selected: validSelected };
                 context.dataloaders.cart.prime(insertId, newRecord);
                 console.log('🚀 新cart已预加载到 DataLoader 缓存:', newRecord);
             }
-            
+
             return insertId;
         } catch (error) {
             console.error('添加cart失败:', error.message);

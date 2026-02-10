@@ -2,19 +2,10 @@ const DataLoader = require('dataloader');
 const { executeQuery } = require('../utils/common');
 
 /**
- * 处理 product 行数据，将 JSON 字符串解析为对象
+ * 处理 product 行数据
  */
 function processProductRow(row) {
   if (!row) return row;
-  
-  // 处理 images 字段（JSON 字符串转数组）
-  if (row.images && typeof row.images === 'string') {
-    try {
-      row.images = JSON.parse(row.images);
-    } catch (e) {
-      row.images = [];
-    }
-  }
   
   return row;
 }
