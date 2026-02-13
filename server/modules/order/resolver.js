@@ -4,17 +4,27 @@ const { formatResultDates } = require('../../utils/date-formatter')
 
 module.exports = {
     // 获取order列表（分页）
-    order: async ({ page = 0, pageSize = 10 }) => {
+    order: async ({ page = 0, pageSize = 10, user_id }) => {
         try {
             const { page: validPage, pageSize: validPageSize } = validatePagination(page, pageSize);
 
-            const sql = 'SELECT id, order_no, user_id, total_amount, pay_amount, status, pay_status, pay_type, pay_time, ship_time, express_company, express_no, receiver_name, receiver_phone, receiver_address, remark, create_date, update_date FROM `order` LIMIT ? OFFSET ?';
-            const countSql = 'SELECT COUNT(*) as counts FROM `order`';
+            let whereSql = '';
             const values = [validPageSize, validPage * validPageSize];
+            const countValues = [];
 
-            console.log('执行分页查询:', { sql, values, countSql });
+            if (user_id !== undefined && user_id !== null && user_id !== '') {
+                const validUser_id = validateInteger(user_id, 'user_id');
+                whereSql = ' WHERE user_id = ?';
+                values.unshift(validUser_id);
+                countValues.push(validUser_id);
+            }
 
-            const result = await executePaginatedQuery(sql, countSql, values);
+            const sql = `SELECT id, order_no, user_id, total_amount, pay_amount, status, pay_status, pay_type, pay_time, ship_time, express_company, express_no, receiver_name, receiver_phone, receiver_address, remark, create_date, update_date FROM \`order\`${whereSql} LIMIT ? OFFSET ?`;
+            const countSql = `SELECT COUNT(*) as counts FROM \`order\`${whereSql}`;
+
+            console.log('执行分页查询:', { sql, values, countSql, countValues });
+
+            const result = await executePaginatedQuery(sql, countSql, values, countValues);
             if (result && result.items) {
                 result.items = formatResultDates(result.items);
             }

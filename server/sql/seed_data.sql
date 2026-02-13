@@ -10,11 +10,11 @@ USE nsgm_shop;
 -- 1. 用户数据
 -- ============================================
 INSERT INTO `user` (`id`, `username`, `password`, `nickname`, `real_name`, `avatar`, `phone`, `email`, `status`, `create_date`, `update_date`) VALUES
-(1, 'admin', '$2b$10$YourHashedPasswordHere', '管理员', '系统管理员', 'https://api.dicebear.com/7.x/avataaars/svg?seed=admin', '13800138000', 'admin@nsgm-shop.com', 'active', NOW(), NOW()),
-(2, 'user001', '$2b$10$YourHashedPasswordHere', '快乐买家', '张三', 'https://api.dicebear.com/7.x/avataaars/svg?seed=user001', '13800138001', 'user001@example.com', 'active', NOW(), NOW()),
-(3, 'user002', '$2b$10$YourHashedPasswordHere', '购物达人', '李四', 'https://api.dicebear.com/7.x/avataaars/svg?seed=user002', '13800138002', 'user002@example.com', 'active', NOW(), NOW()),
-(4, 'user003', '$2b$10$YourHashedPasswordHere', '品质生活', '王五', 'https://api.dicebear.com/7.x/avataaars/svg?seed=user003', '13800138003', 'user003@example.com', 'active', NOW(), NOW()),
-(5, 'user004', '$2b$10$YourHashedPasswordHere', '数码控', '赵六', 'https://api.dicebear.com/7.x/avataaars/svg?seed=user004', '13800138004', 'user004@example.com', 'active', NOW(), NOW());
+(1, 'admin', '$2b$10$3XMVlOT9S0KpwVdNk.F2se9Jk8ZC5bSubNBkRF8/zMGLkUq5VOz9G', '管理员', '系统管理员', 'https://api.dicebear.com/7.x/avataaars/svg?seed=admin', '13800138000', 'admin@nsgm-shop.com', 'active', NOW(), NOW()),
+(2, 'user001', '$2b$10$3XMVlOT9S0KpwVdNk.F2se9Jk8ZC5bSubNBkRF8/zMGLkUq5VOz9G', '快乐买家', '张三', 'https://api.dicebear.com/7.x/avataaars/svg?seed=user001', '13800138001', 'user001@example.com', 'active', NOW(), NOW()),
+(3, 'user002', '$2b$10$3XMVlOT9S0KpwVdNk.F2se9Jk8ZC5bSubNBkRF8/zMGLkUq5VOz9G', '购物达人', '李四', 'https://api.dicebear.com/7.x/avataaars/svg?seed=user002', '13800138002', 'user002@example.com', 'active', NOW(), NOW()),
+(4, 'user003', '$2b$10$3XMVlOT9S0KpwVdNk.F2se9Jk8ZC5bSubNBkRF8/zMGLkUq5VOz9G', '品质生活', '王五', 'https://api.dicebear.com/7.x/avataaars/svg?seed=user003', '13800138003', 'user003@example.com', 'active', NOW(), NOW()),
+(5, 'user004', '$2b$10$3XMVlOT9S0KpwVdNk.F2se9Jk8ZC5bSubNBkRF8/zMGLkUq5VOz9G', '数码控', '赵六', 'https://api.dicebear.com/7.x/avataaars/svg?seed=user004', '13800138004', 'user004@example.com', 'active', NOW(), NOW());
 
 -- ============================================
 -- 2. 商品分类数据

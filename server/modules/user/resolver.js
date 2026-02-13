@@ -1,3 +1,4 @@
+const bcrypt = require('bcrypt')
 const { executeQuery, executePaginatedQuery } = require('../../utils/common')
 const { validateInteger, validatePagination, validateId } = require('../../utils/validation')
 const { formatResultDates } = require('../../utils/date-formatter')
@@ -23,8 +24,9 @@ module.exports = {
                 throw new Error('账号已被禁用');
             }
 
-            // 简单验证密码（实际应该使用 bcrypt 等加密库）
-            if (user.password !== password) {
+            // 使用 bcrypt 验证密码
+            const isValidPassword = await bcrypt.compare(password, user.password);
+            if (!isValidPassword) {
                 throw new Error('用户名或密码错误');
             }
 
