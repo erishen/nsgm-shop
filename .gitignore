@@ -9,3 +9,4 @@ scripts/dump.*
 .env.development
 *.log
 coverage
+.serena
